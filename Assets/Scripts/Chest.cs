@@ -5,9 +5,12 @@ using UnityEngine.InputSystem;
 
 public class Chest : MonoBehaviour
 {
+
     [SerializeField] private SpriteRenderer[] graphisms;
     [SerializeField] private Sprite[] openSprite;
     [SerializeField] private Sprite[] closedSprite;
+
+    [SerializeField] private Item[] content;
 
     private GameManager manager;
 
@@ -35,9 +38,18 @@ public class Chest : MonoBehaviour
         }
     }
 
+    private void EmptyChest()
+    {
+        foreach(var item in content)
+        {
+            PlayerItems.AddItem(item);
+        }
+    }
+
     private void Open()
     {
         isOpenned = true;
+        EmptyChest();
         for (int i = 0; i < graphisms.Length; i++)
         {
             graphisms[i].sprite = openSprite[i];

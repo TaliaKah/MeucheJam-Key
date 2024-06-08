@@ -18,25 +18,37 @@ public enum ItemID
     Easter_Egg_Patate
 }
 
-[System.Serializable] public class Item
+[System.Serializable]
+public class Item
 {
     [SerializeField] private string itemName;
     [SerializeField] private ItemID id;
+    [SerializeField] private Sprite icon;
 
     public string Name => itemName;
     public ItemID Id => id;
+    public Sprite Icon => icon;
 
     // Constructeur
-    public Item(string name, ItemID id)
+    public Item(string name, ItemID id, Sprite icon)
     {
         this.itemName = name;
         this.id = id;
+        this.icon = icon;
     }
 }
 
 public class PlayerItems : MonoBehaviour
 {
     [SerializeField] private static Dictionary<ItemID, Item> items = new Dictionary<ItemID, Item>();
+
+    public static InventoryUI inventoryUI;
+
+    private void Start()
+    {
+        items = new Dictionary<ItemID, Item>();
+        inventoryUI = FindObjectOfType<InventoryUI>();
+    }
 
     // Ajouter un item
     public static bool AddItem(Item item)
@@ -45,7 +57,7 @@ public class PlayerItems : MonoBehaviour
         {
             return false; // L'item existe déjà
         }
-
+        inventoryUI?.AddItemToUI(item);
         items[item.Id] = item;
         return true;
     }
@@ -53,6 +65,7 @@ public class PlayerItems : MonoBehaviour
     // Retirer un item
     public static bool RemoveItem(ItemID itemId)
     {
+        inventoryUI?.RemoveItemFromUI(itemId);
         return items.Remove(itemId);
     }
 

@@ -14,27 +14,35 @@ public class Chest : MonoBehaviour
 
     private GameManager manager;
 
-    private InputAction interactAction;
-
     private bool isReach = false;
     private bool isOpenned = false;
 
     private void Start()
     {
         manager = GameManager.Instance;
-        interactAction = manager.GetInputs().actions.FindAction("Interact");
+        InputManager.Instance.interactionEvent.AddListener(Interact);
     }
 
-    private void Update()
+    public void Interact()
     {
-        float interact = interactAction.ReadValue<float>();
-        if(isReach && interact > 0)
+        if(isReach)
         {
-            Open();
+            ChangeState(true, openSprite);
         }
-        else if(!isReach)
+        else
         {
-            Close();
+            ChangeState(false, closedSprite);
+        }
+    }
+
+    private void ChangeState(bool state, Sprite[] sprites)
+    {
+        isOpenned = state;
+        if(isOpenned) EmptyChest();
+
+        for (int i = 0; i < graphisms.Length; i++)
+        {
+            graphisms[i].sprite = sprites[i];
         }
     }
 
@@ -43,25 +51,6 @@ public class Chest : MonoBehaviour
         foreach(var item in content)
         {
             PlayerItems.AddItem(item);
-        }
-    }
-
-    private void Open()
-    {
-        isOpenned = true;
-        EmptyChest();
-        for (int i = 0; i < graphisms.Length; i++)
-        {
-            graphisms[i].sprite = openSprite[i];
-        }
-    }
-
-    private void Close()
-    {
-        isOpenned = false;
-        for (int i = 0; i < graphisms.Length; i++)
-        {
-            graphisms[i].sprite = closedSprite[i];
         }
     }
 

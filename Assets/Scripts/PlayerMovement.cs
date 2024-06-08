@@ -3,9 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private PlayerInput inputs;
+    private InputManager inputs;
     private GameManager manager;
-    private InputAction moveAction;
 
     private Animator animation;
 
@@ -18,13 +17,12 @@ public class PlayerMovement : MonoBehaviour
         manager = GameManager.Instance;
         animation = GetComponent<Animator>();
 
-        inputs = GameManager.Instance.GetInputs();
-        moveAction = inputs.actions.FindAction("Move");
+        inputs = InputManager.Instance;
     }
 
     void FixedUpdate()
     {
-        Vector2 moveValue = moveAction.ReadValue<Vector2>();
+        Vector2 moveValue = inputs.GetMovingInputs().normalized;
         moveValue = ChooseDirection(moveValue);
 
         velocity = moveValue * speed;
@@ -36,37 +34,19 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 ChooseDirection(Vector2 value)
     {
-        Vector2 result = Vector2.zero;
-        if(Mathf.Abs(value.x) >= Mathf.Abs(value.y))
-        {
-                result = new Vector2(value.x, 0);
-        }
-        else
-        {
-            result = new Vector2(0, value.y);
-        }
+        Vector2 result = Mathf.Abs(value.x) >= Mathf.Abs(value.y) ? new Vector2(value.x, 0) : new Vector2(0, value.y);
+
         direction = SetDirection(result);
         return result;
     }
 
     private int SetDirection(Vector2 vector)
     {
-        if (vector.x > 0)
-        {
-            return 6;
-        }
-        if (vector.x < 0)
-        {
-            return 4;
-        }
-        if (vector.y > 0)
-        {
-            return 8;
-        }
-        if (vector.y < 0)
-        {
-            return 2;
-        }
+        if (vector.x > 0)return 6;
+        if (vector.x < 0) return 4;
+        if (vector.y > 0)return 8;
+        if (vector.y < 0)return 2;
+
         return 0;
     } 
 

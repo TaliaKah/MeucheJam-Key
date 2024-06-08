@@ -6,8 +6,6 @@ using UnityEngine.InputSystem;
 
 public class GameManager : Singleton<GameManager>
 {
-    [SerializeField] private PlayerInput inputs;
-
     public float delayBeforeLoad = 3f;
     public Image fadeImage;
     public float fadeDuration = 1f;
@@ -45,8 +43,4 @@ public class GameManager : Singleton<GameManager>
         fadeImage.color = targetColor;
     }
 
-    public PlayerInput GetInputs()
-    {
-        return inputs;
-    }
 }

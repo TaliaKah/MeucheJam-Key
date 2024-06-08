@@ -54781,7 +54781,7 @@ Transform:
   m_GameObject: {fileID: 1872864326}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.57, y: 6, z: 0}
+  m_LocalPosition: {x: -0.14, y: 2.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -54865,6 +54865,7 @@ GameObject:
   - component: {fileID: 1999720088}
   - component: {fileID: 1999720090}
   - component: {fileID: 1999720089}
+  - component: {fileID: 1999720091}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -54881,7 +54882,7 @@ Transform:
   m_GameObject: {fileID: 1999720087}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7983311, y: -4.8615837, z: -0.33048996}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -54899,7 +54900,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9959c9cd3a9f446af36d02b4cfe823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputs: {fileID: 1999720090}
   delayBeforeLoad: 3
   fadeImage: {fileID: 0}
   fadeDuration: 1
@@ -54933,6 +54933,34 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1999720091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999720087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18455c9d39fa13242aac8d99faad40e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputs: {fileID: 1999720090}
+  interactionEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1872864329}
+        m_TargetAssemblyTypeName: Chest, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2055417147
 GameObject:
   m_ObjectHideFlags: 0

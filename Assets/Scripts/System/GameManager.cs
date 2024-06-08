@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
-public float delayBeforeLoad = 3f;
+    [SerializeField] private PlayerInput inputs;
+
+    public float delayBeforeLoad = 3f;
     public Image fadeImage;
     public float fadeDuration = 1f;
 
@@ -40,5 +43,10 @@ public float delayBeforeLoad = 3f;
         }
 
         fadeImage.color = targetColor;
+    }
+
+    public PlayerInput GetInputs()
+    {
+        return inputs;
     }
 }

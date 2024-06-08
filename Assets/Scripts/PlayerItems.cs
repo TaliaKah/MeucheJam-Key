@@ -36,7 +36,7 @@ public enum ItemID
 
 public class PlayerItems : MonoBehaviour
 {
-    private static Dictionary<ItemID, Item> items = new Dictionary<ItemID, Item>();
+    [SerializeField] private static Dictionary<ItemID, Item> items = new Dictionary<ItemID, Item>();
 
     // Ajouter un item
     public static bool AddItem(Item item)

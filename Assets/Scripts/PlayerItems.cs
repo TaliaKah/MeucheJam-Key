@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum ItemID
 {
+    Petite_Cle,
     Cle_Allen,
     Cle_A_Molette,
     Triangle,

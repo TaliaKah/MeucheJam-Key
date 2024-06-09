@@ -81,4 +81,9 @@ public class PlayerItems : MonoBehaviour
     {
         return items.Values;
     }
+
+    public static bool HasItem(ItemID itemId)
+    {
+        return items.ContainsKey(itemId);
+    }
 }

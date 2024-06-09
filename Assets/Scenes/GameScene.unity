@@ -935,7 +935,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d876af0bf0fab9544809486c04af9b56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: "Es-tu s\xFBr d'avoir toutes les cl\xE9s en main ?"
+  content: "La cl\xE9 \xE0 molette, la cl\xE9 de Sol, la cl\xE9 USB, ... Es-tu s\xFBr
+    d'avoir toutes les cl\xE9s en main ?"
 --- !u!61 &287160535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2388,7 +2389,43 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1999720092}
+        m_TargetAssemblyTypeName: DialogEvents, Assembly-CSharp
+        m_MethodName: AddCleDuMystere
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1999720092}
+        m_TargetAssemblyTypeName: DialogEvents, Assembly-CSharp
+        m_MethodName: NoNeedMysteryKeyNow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1999720092}
+        m_TargetAssemblyTypeName: DialogEvents, Assembly-CSharp
+        m_MethodName: NeedHeartKeyNow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &611226368
 GameObject:
   m_ObjectHideFlags: 0
@@ -3565,31 +3602,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1999720092}
-        m_TargetAssemblyTypeName: DialogEvents, Assembly-CSharp
-        m_MethodName: AddCleDuCoeur
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1999720092}
-        m_TargetAssemblyTypeName: DialogEvents, Assembly-CSharp
-        m_MethodName: NoNeedHeartKeyNow
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &926150246
 GameObject:
   m_ObjectHideFlags: 0
@@ -9701,16 +9714,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -39, y: -6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 15
-      m_TileSpriteIndex: 15
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -36, y: -6, z: 0}
     second:
       serializedVersion: 2
@@ -10411,16 +10414,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -43, y: -3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 15
-      m_TileSpriteIndex: 15
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -36, y: -3, z: 0}
     second:
       serializedVersion: 2
@@ -10586,16 +10579,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 5
       m_TileSpriteIndex: 5
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -37, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 15
-      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -10791,16 +10774,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -44, y: -1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 15
-      m_TileSpriteIndex: 15
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -36, y: -1, z: 0}
     second:
       serializedVersion: 2
@@ -10886,16 +10859,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 5
       m_TileSpriteIndex: 5
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -39, y: 0, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 15
-      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11506,16 +11469,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 5
       m_TileSpriteIndex: 5
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -41, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 15
-      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -22853,8 +22806,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: f605d018ae649974b82e5de0acf6cb2b, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 21891f3bebbc0ca4ebe41f0ba794ef64, type: 2}
-  - m_RefCount: 6
-    m_Data: {fileID: 11400000, guid: 39a5593b12b19a242915cdb80ee22019, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 13ba919aa8aec524398362632da54118, type: 2}
   - m_RefCount: 1
@@ -22892,8 +22845,8 @@ Tilemap:
     m_Data: {fileID: 1094763541, guid: 6a02040dd2466a043bb86d00336e4bbf, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1657177397, guid: 6a02040dd2466a043bb86d00336e4bbf, type: 3}
-  - m_RefCount: 6
-    m_Data: {fileID: 1449275079, guid: 6a02040dd2466a043bb86d00336e4bbf, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -309947415, guid: 6a02040dd2466a043bb86d00336e4bbf, type: 3}
   - m_RefCount: 1
@@ -22901,7 +22854,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 424275289, guid: 6a02040dd2466a043bb86d00336e4bbf, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 1577
+  - m_RefCount: 1571
     m_Data:
       e00: 1
       e01: 0
@@ -22920,7 +22873,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 1577
+  - m_RefCount: 1571
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -100119,25 +100072,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 18
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-7.00003052,\"yPos\":136.8},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"O\xF9
-    est-on?\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":217.000031,\"yPos\":136.8},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Qui
-    es-tu?\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":445.000031,\"yPos\":134.8},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Au
-    revoir.\",\"parentUIDs\":[0],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"FirstSpeak\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":107.200012,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bonjour
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":30.5999451,\"yPos\":136.8},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"O\xF9
+    est-on?\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":254.6,\"yPos\":136.8},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Qui
+    es-tu?\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":482.6,\"yPos\":134.8},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Au
+    revoir.\",\"parentUIDs\":[0],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"FirstSpeak\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":144.799988,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bonjour
     \xE0 toi \xE2me perdue !\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Grand
-    pr\xEAtre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-62.0000153,\"yPos\":199.799973},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nous
+    pr\xEAtre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-24.40004,\"yPos\":199.799973},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nous
     sommes enferm\xE9s \xE0 l'int\xE9rieur d'un sombre donjon. J'ai perdu espoir
     de sortir un jour de cet enfer.\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Grand
-    Pr\xEAtre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-69.0000153,\"yPos\":328.8},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Il
+    Pr\xEAtre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-31.40004,\"yPos\":328.8},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Il
     faut r\xE9unir les diff\xE9rentes cl\xE9s de ce monde pour revoir l'ext\xE9rieur.\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Grand
-    Pr\xEAtre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":83,\"yPos\":680.7999},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Vous
-    recevez l'item petite cl\xE9.\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":85,\"yPos\":547.8},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Je
+    Pr\xEAtre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":120.599976,\"yPos\":680.7999},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Vous
+    recevez l'item petite cl\xE9.\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":122.599976,\"yPos\":547.8},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Je
     te donne cet objet qui te permettra d'ouvrir le chemin vers ta qu\xEAte.\",\"parentUIDs\":[17],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Grand
-    Pr\xEAtre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":252.000031,\"yPos\":204.799973},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Je
+    Pr\xEAtre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":289.6,\"yPos\":204.799973},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Je
     suis le Grand Pr\xEAtre de ces lieux charg\xE9 de surveiller la grande porte
     qui m\xE8ne vers l'autre monde. \",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Grand
-    Pr\xEAtre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":252.000031,\"yPos\":323.8},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Malheureusement
+    Pr\xEAtre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":289.6,\"yPos\":323.8},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Malheureusement
     les cl\xE9s sont perdues et je n'ai pas l'energie de les chercher.\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Grand
-    Pr\xEAtre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableBoolCondition:#DialogueEditor\",\"ParameterName\":\"FirstSpeak\",\"CheckType\":0,\"RequiredValue\":true}],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":85.80002,\"yPos\":434.8},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Je
+    Pr\xEAtre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableBoolCondition:#DialogueEditor\",\"ParameterName\":\"FirstSpeak\",\"CheckType\":0,\"RequiredValue\":true}],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":123.399994,\"yPos\":434.8},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Je
     te donne les clefs pour agir librement.\",\"parentUIDs\":[7,14],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Grand
     Pr\xEAtre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110

@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class GrandPretreDialog : MonoBehaviour
 {
     public NPCConversation conversation;
+    public NPCConversation endConversation;
 
     private GameManager manager;
 
@@ -27,7 +28,14 @@ public class GrandPretreDialog : MonoBehaviour
     {
         if(isReach)
         {
-            Talk(conversation);
+            if(DialogEvents.GetEndDialog()){
+                ConversationManager.Instance.SetBool("FirstSpeak", DialogEvents.GetFirstSpeak());
+                Talk(conversation);
+            }
+            else{
+                Talk(endConversation);
+                ConversationManager.Instance.SetBool("FirstSpeak", DialogEvents.GetNeedMysteryKey());
+            }
         }
     }
 

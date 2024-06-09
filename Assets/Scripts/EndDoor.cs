@@ -8,12 +8,16 @@ public class EndDoor : MonoBehaviour
     public ItemID requiredKey4;
 
     private GameManager manager;
+    private DialogEvents dialogs;
+
+    private bool tryOpen = false;
 
     private bool isReach = false;
 
     private void Start()
     {
         manager = GameManager.Instance;
+        dialogs = DialogEvents.Instance;
         InputManager.Instance.interactionEvent.AddListener(Interact);
     }
 
@@ -26,6 +30,11 @@ public class EndDoor : MonoBehaviour
                 PlayerItems.RemoveItem(requiredKey2);
                 PlayerItems.RemoveItem(requiredKey3);
                 PlayerItems.RemoveItem(requiredKey4);
+        }
+        else if(isReach && !tryOpen && PlayerItems.HasItem(requiredKey1) && PlayerItems.HasItem(requiredKey2) && PlayerItems.HasItem(requiredKey3) && PlayerItems.HasItem(requiredKey4))
+        {
+            dialogs.NeedMysteryKeyNow();
+            tryOpen = false;
         }
     }
 

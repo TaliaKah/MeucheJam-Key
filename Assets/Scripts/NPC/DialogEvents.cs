@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogEvents : MonoBehaviour
+public class DialogEvents : Singleton<DialogEvents>
 {
     [SerializeField] private Item[] content;
 
+    public ItemID requiredKey1;
+    public ItemID requiredKey2;
+    public ItemID requiredKey3;
 
     private static bool NeedHeartKey = false;
     private static bool NeedMysteryKey = false;

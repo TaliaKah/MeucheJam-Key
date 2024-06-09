@@ -16,7 +16,8 @@ public enum ItemID
     Rond,
     Cle_Du_Mystere,
     Cle_Du_Coeur,
-    Easter_Egg_Patate
+    Easter_Egg_Patate,
+    End,
 }
 
 [System.Serializable]

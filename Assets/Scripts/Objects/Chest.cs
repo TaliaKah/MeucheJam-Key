@@ -12,6 +12,8 @@ public class Chest : MonoBehaviour
 
     [SerializeField] private Item[] content;
 
+    public GameObject Infos;
+     
     private GameManager manager;
 
     private bool isReach = false;
@@ -51,6 +53,7 @@ public class Chest : MonoBehaviour
         foreach(var item in content)
         {
             PlayerItems.AddItem(item);
+            Destroy(Infos);
         }
     }
 

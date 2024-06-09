@@ -21,7 +21,7 @@ public class MaladeDialog : MonoBehaviour
     private void Talk(NPCConversation conv)
     {
         ConversationManager.Instance.StartConversation(conv);
-        ConversationManager.Instance.SetBool("HeartKey", DialogEvents.GetNeedMysteryKey());
+        ConversationManager.Instance.SetBool("HeartKey", DialogEvents.GetNeedHeartKey());
     }
     
     public void Interact()

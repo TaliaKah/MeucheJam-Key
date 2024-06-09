@@ -31,10 +31,11 @@ public class EndDoor : MonoBehaviour
                 PlayerItems.RemoveItem(requiredKey3);
                 PlayerItems.RemoveItem(requiredKey4);
         }
-        else if(isReach && !tryOpen && PlayerItems.HasItem(requiredKey1) && PlayerItems.HasItem(requiredKey2) && PlayerItems.HasItem(requiredKey3) && PlayerItems.HasItem(requiredKey4))
+        else if(!tryOpen && isReach && PlayerItems.HasItem(requiredKey1) && PlayerItems.HasItem(requiredKey2) && PlayerItems.HasItem(requiredKey3))
         {
+            dialogs.EndDialogNow();
             dialogs.NeedMysteryKeyNow();
-            tryOpen = false;
+            tryOpen = true;
         }
     }
 

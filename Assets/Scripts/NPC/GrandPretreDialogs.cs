@@ -28,7 +28,7 @@ public class GrandPretreDialog : MonoBehaviour
     {
         if(isReach)
         {
-            if(DialogEvents.GetEndDialog()){
+            if(!DialogEvents.GetEndDialog()){
                 ConversationManager.Instance.SetBool("FirstSpeak", DialogEvents.GetFirstSpeak());
                 Talk(conversation);
             }
